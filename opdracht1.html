@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vriendelijk groeten</title>
+    <script>
+      function checkInput() {
+        if (document.myForm.Input.value == "hallo") {
+          alert("Welkom!");
+        } else if (document.myForm.Input.value == "doei") {
+          alert("Tot de volgende keer!");
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <form name="myForm" onsubmit="(checkInput());">
+      <input type="text" name="Input" />
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
