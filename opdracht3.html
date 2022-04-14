@@ -9,16 +9,16 @@
     <script>
       function checkManyE() {
         var input = document.myForm.Input.value;
+        var letter = document.myForm.Letter.value;
         var counter = 0;
         for (i = 0; i < input.length; i++) {
-          if (
-            document.myForm.Input.value[i] == "e" ||
-            document.myForm.Input.value[i] == "E"
-          ) {
+          if (document.myForm.Input.value[i] == letter) {
             counter++;
           }
         }
-        alert("Er zitten " + counter + " e's in dit woord.");
+        alert(
+          "Er zit " + counter + " keer de letter " + letter + " in dit woord."
+        );
       }
     </script>
   </head>
