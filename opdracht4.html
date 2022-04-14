@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Op welke knoppen is er eigenlijk geklikt?</title>
+  </head>
+  <script>
+    function showDivA() {
+      document.getElementById("button A").style.display = "block";
+    }
+    function showDivB() {
+      document.getElementById("button B").style.display = "block";
+    }
+    function showDivC() {
+      document.getElementById("button C").style.display = "block";
+    }
+    function showDivD() {
+      document.getElementById("button D").style.display = "block";
+    }
+  </script>
+  <body>
+    <div id="button A" style="display: none">U heeft op knop A gedrukt</div>
+    <div id="button B" style="display: none">U heeft op knop B gedrukt</div>
+    <div id="button C" style="display: none">U heeft op knop C gedrukt</div>
+    <div id="button D" style="display: none">U heeft op knop D gedrukt</div>
+
+    <input type="button" name="A" value="A" onclick="showDivA()" />
+    <input type="button" name="B" value="B" onclick="showDivB()" />
+    <input type="button" name="C" value="C" onclick="showDivC()" />
+    <input type="button" name="D" value="D" onclick="showDivD()" />
+  </body>
+</html>
