@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>De lente begint!</title>
+  </head>
+  <script>
+    var counter = 2;
+    var imgArray = new Array();
+    imgArray[0] = new Image();
+    imgArray[0].src = "seasons/lente.jpg";
+    imgArray[1] = new Image();
+    imgArray[1].src = "seasons/zomer.jpg";
+    imgArray[2] = new Image();
+    imgArray[2].src = "seasons/herfst.jpg";
+    imgArray[3] = new Image();
+    imgArray[3].src = "seasons/winter.jpg";
+
+    function next() {
+      document.getElementById("myImageA").src = imgArray[counter].src;
+      counter++;
+      if (counter == 4) {
+        counter = 0;
+      }
+      if (document.getElementById("myImageA").src == imgArray[0].src) {
+        document.getElementById("myImageB").src = "seasons/lammetjes.jpg";
+      } else {
+        document.getElementById("myImageB").src = "seasons/weide.jpg";
+      }
+    }
+  </script>
+  <body>
+    <img
+      id="myImageA"
+      style="width: 200px"
+      src="seasons/zomer.jpg"
+      onclick="next()"
+    />
+    <img id="myImageB" style="width: 200px" src="seasons/weide.jpg" />
+  </body>
+</html>
