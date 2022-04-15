@@ -12,48 +12,146 @@
     />
     <title>Rekenmachine</title>
   </head>
-  <script>
-    src = "rekenmachine\calculator.js";
-  </script>
+  <script src="calculator.js"></script>
   <body>
     <div class="top">
-      <input type="text" class="screen" value="" disabled />
+      <input type="text" id="screen" value="" disabled />
     </div>
     <div class="bottom">
       <div class="row">
-        <button class="button" value="C/CE">C/CE</button>
-        <button class="button" value="OFF">OFF</button>
-        <button class="button" value="√">&radic;</button>
-        <button class="button" value="%">%</button>
+        <button type="button" class="clear" id="clear" value="C/CE">
+          C/CE
+        </button>
+        <button type="button" class="off" id="off" value="OFF">OFF</button>
+        <button type="button" class="operator" id="operator" value="√">
+          &radic;
+        </button>
+        <button type="button" class="operator" id="operator" value="%">
+          %
+        </button>
       </div>
       <div class="row">
-        <button class="button" value="MRC">MRC</button>
-        <button class="button" value="M-">M-</button>
-        <button class="button" value="M+">M+</button>
-        <button class="button" value="÷">&divide;</button>
+        <button type="button" class="memory" id="memory" value="MRC">
+          MRC
+        </button>
+        <button type="button" class="memory" id="memory" value="M-">M-</button>
+        <button type="button" class="memory" id="memory" value="M+">M+</button>
+        <button type="button" class="operator" id="operator" value="÷">
+          &divide;
+        </button>
       </div>
       <div class="row">
-        <button class="button" value="7">7</button>
-        <button class="button" value="8">8</button>
-        <button class="button" value="9">9</button>
-        <button class="button" value="x">&times;</button>
+        <button
+          type="button"
+          class="number"
+          id="number"
+          value="7"
+          onclick="clickNumber(this)"
+        >
+          7
+        </button>
+        <button
+          type="button"
+          class="number"
+          id="number"
+          value="8"
+          onclick="clickNumber(this)"
+        >
+          8
+        </button>
+        <button
+          type="button"
+          class="number"
+          id="number"
+          value="9"
+          onclick="clickNumber(this)"
+        >
+          9
+        </button>
+        <button type="button" class="operator" id="operator" value="x">
+          &times;
+        </button>
       </div>
       <div class="row">
-        <button class="button" value="4">4</button>
-        <button class="button" value="5">5</button>
-        <button class="button" value="6">6</button>
-        <button class="button" value="-">-</button>
+        <button
+          type="button"
+          class="number"
+          id="number"
+          value="4"
+          onclick="clickNumber(this)"
+        >
+          4
+        </button>
+        <button
+          type="button"
+          class="number"
+          id="number"
+          value="5"
+          onclick="clickNumber(this)"
+        >
+          5
+        </button>
+        <button
+          type="button"
+          class="number"
+          id="number"
+          value="6"
+          onclick="clickNumber(this)"
+        >
+          6
+        </button>
+        <button type="button" class="operator" id="operator" value="-">
+          -
+        </button>
       </div>
       <div class="row">
-        <button class="button" value="3">3</button>
-        <button class="button" value="2">2</button>
-        <button class="button" value="1">1</button>
-        <button class="button" value="+">+</button>
+        <button
+          type="button"
+          class="number"
+          id="number"
+          value="3"
+          onclick="clickNumber(this)"
+        >
+          3
+        </button>
+        <button
+          type="button"
+          class="number"
+          id="number"
+          value="2"
+          onclick="clickNumber(this)"
+        >
+          2
+        </button>
+        <button
+          type="button"
+          class="number"
+          id="number"
+          value="1"
+          onclick="clickNumber(this)"
+        >
+          1
+        </button>
+        <button type="button" class="operator" id="operator" value="+">
+          +
+        </button>
       </div>
       <div class="row">
-        <button class="button" value="0">0</button>
-        <button class="button" value=".">.</button>
-        <button class="button" value="=">=</button>
+        <button
+          type="button"
+          class="number"
+          id="number"
+          value="0"
+          onclick="clickNumber(this)"
+        >
+          0
+        </button>
+        <button type="button" class="operator" id="operator" value=".">
+          .
+        </button>
+        <button type="button" class="operator" id="operator" value="=">
+          =
+        </button>
       </div>
     </div>
   </body>
