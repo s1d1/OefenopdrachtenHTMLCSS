@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zijn de afbeeldingen hetzelfde?</title>
+  </head>
+  <script>
+    var counterA = 1;
+    var counterB = 1;
+    var imgArray = new Array();
+    imgArray[0] = new Image();
+    imgArray[0].src = "seasons/lente.jpg";
+    imgArray[1] = new Image();
+    imgArray[1].src = "seasons/zomer.jpg";
+    imgArray[2] = new Image();
+    imgArray[2].src = "seasons/herfst.jpg";
+    imgArray[3] = new Image();
+    imgArray[3].src = "seasons/winter.jpg";
+
+    function nextA() {
+      document.getElementById("myImageA").src = imgArray[counterA].src;
+      counterA++;
+      if (counterA == 4) {
+        counterA = 0;
+      }
+    }
+    function nextB() {
+      document.getElementById("myImageB").src = imgArray[counterB].src;
+      counterB++;
+      if (counterB == 4) {
+        counterB = 0;
+      }
+    }
+    function samedif() {
+      if (
+        document.getElementById("myImageA").src ==
+        document.getElementById("myImageB").src
+      ) {
+        console.log("HETZELFDE");
+      } else {
+        console.log("NIET HETZELFDE");
+      }
+    }
+  </script>
+  <body>
+    <img id="myImageA" style="width: 200px" src="seasons/lente.jpg" />
+    <img id="myImageB" style="width: 200px" src="seasons/lente.jpg" />
+
+    <button onclick="nextA()">Knop 1</button>
+    <button onclick="nextB()">Knop 2</button>
+    <button onclick="samedif()">Knop 3</button>
+  </body>
+</html>
