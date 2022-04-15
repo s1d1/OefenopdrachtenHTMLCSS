@@ -6,12 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vier seizoenen, vier afbeeldingen</title>
   </head>
-  <script></script>
-  <body>
-    <img id="myImage" style="width: 200px" src="img/ajaxzwart.jpg" />
+  <script>
+    var counter = 1;
+    var years = 0;
+    var imgArray = new Array();
+    imgArray[0] = new Image();
+    imgArray[0].src = "seasons/lente.jpg";
+    imgArray[1] = new Image();
+    imgArray[1].src = "seasons/zomer.jpg";
+    imgArray[2] = new Image();
+    imgArray[2].src = "seasons/herfst.jpg";
+    imgArray[3] = new Image();
+    imgArray[3].src = "seasons/winter.jpg";
 
-    <button onclick="document.getElementById('myImage').src='img/ajaxwit.jpg'">
-      Klik hier om het logo teveranderen
-    </button>
+    function next() {
+      if (counter == 4) {
+        counter = 0;
+        years++;
+      }
+      if (years == 3) {
+        let parentDiv = document.getElementById("jaren");
+        let div = document.createElement("div");
+        div.textContent = "Er zijn drie jaren voorbij";
+        parentDiv.appendChild(div);
+      }
+      document.getElementById("myImage").src = imgArray[counter].src;
+      counter++;
+    }
+  </script>
+  <body>
+    <img id="myImage" style="width: 200px" src="seasons/lente.jpg" />
+
+    <button onclick="next()">Klik hier om het logo teveranderen</button>
+
+    <div id="jaren"></div>
   </body>
 </html>
