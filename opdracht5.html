@@ -7,27 +7,34 @@
     <title>Op ieder knop mag 1 keer geklikt worden</title>
   </head>
   <script>
+    var counter = 0;
     function showDiv(button) {
       const button_name = button.value;
       if (button_name == "A") {
         let parentDiv = document.getElementById("div1");
         let div = document.createElement("div");
-        div.textContent = "U heeft op knop A gedrukt";
+        div.textContent = "U heeft op knop A geklikt";
         parentDiv.appendChild(div);
       } else if (button_name == "B") {
         let parentDiv = document.getElementById("div1");
         let div = document.createElement("div");
-        div.textContent = "U heeft op knop B gedrukt";
+        div.textContent = "U heeft op knop B geklikt";
         parentDiv.appendChild(div);
       } else if (button_name == "C") {
+        counter++;
+
         let parentDiv = document.getElementById("div1");
         let div = document.createElement("div");
-        div.textContent = "U heeft op knop C gedrukt";
+        div.textContent = "U heeft op knop C geklikt";
         parentDiv.appendChild(div);
+
+        if (counter > 1) {
+          alert("U heeft al " + counter + " keer op C geklikt");
+        }
       } else {
         let parentDiv = document.getElementById("div1");
         let div = document.createElement("div");
-        div.textContent = "U heeft op knop D gedrukt";
+        div.textContent = "U heeft op knop D geklikt";
         parentDiv.appendChild(div);
       }
     }
